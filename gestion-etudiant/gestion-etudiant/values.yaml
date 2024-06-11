@@ -1,0 +1,37 @@
+replicaCount: 1
+
+image:
+  frontendRepository: salimamri/front-angular
+  backendRepository: salimamri/backend-springboot
+  frontendTag: "{{ .Values.image.tag | default 'latest' }}"
+  backendTag: "{{ .Values.image.tag | default 'latest' }}"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+  backendPort: 8082
+
+ingress:
+  enabled: true
+  className: nginx
+  annotations: {}
+  hosts:
+    - host: myapp.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+        - path: /api
+          pathType: Prefix
+  tls: []
+
+mongodb:
+  image:
+    repository: mongo
+    tag: "4.4"
+    pullPolicy: IfNotPresent
+  service:
+    port: 27017
+  persistence:
+    enabled: true
+    size: 1Gi
