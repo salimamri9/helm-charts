@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: "{{ .Values.image.frontendRepository }}:{{ .Values.image.frontendTag }}"
+          image: "salimamri/front-angular:97"
           ports:
             - containerPort: 80
           resources:
