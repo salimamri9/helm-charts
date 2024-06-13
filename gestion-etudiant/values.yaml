@@ -3,8 +3,8 @@ replicaCount: 1
 image:
   frontendRepository: salimamri/front-angular
   backendRepository: salimamri/backend-springboot
-  frontendTag: "{{ .Values.image.tag | default 'latest' }}"
-  backendTag: "{{ .Values.image.tag | default 'latest' }}"
+  frontendTag: 97
+  backendTag: 97
   pullPolicy: IfNotPresent
 
 service:
