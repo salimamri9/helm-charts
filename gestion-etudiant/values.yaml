@@ -3,8 +3,8 @@ replicaCount: 1
 image:
   frontendRepository: salimamri/front-angular
   backendRepository: salimamri/backend-springboot
-  frontendTag: 44
-  backendTag: 44
+  frontendTag: 46
+  backendTag: 46
   pullPolicy: IfNotPresent
 
 service:
