@@ -1,0 +1,7 @@
+backend:
+  image:
+    tag: 1.1  # Default backend image tag
+
+frontend:
+  image:
+    tag: 1.1  # Default frontend image tag
