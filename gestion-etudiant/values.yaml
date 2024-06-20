@@ -1,7 +1,7 @@
 backend:
   image:
-    tag: 1.74
+    tag: 1.75
 
 frontend:
   image:
-    tag: 1.74
+    tag: 1.75
