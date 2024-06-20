@@ -17,13 +17,6 @@ spec:
         image: salimamri/backend-springboot:{{ .Values.backend.image.tag }}
         ports:
         - containerPort: 8080 
-        resources:
-            requests:
-              cpu: 100m
-              memory: 200Mi
-            limits:
-              cpu: 500m
-              memory: 500Mi
         env:
         - name: SPRING_DATA_MONGODB_URI
           value: mongodb://root:password@mongodb:27017/Etudiant
